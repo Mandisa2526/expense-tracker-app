@@ -1,24 +1,51 @@
 export default function ExpenseTrackerObj(query) {
    let error = '';
-   let expenseDescription = '';
-   var letters = /^[A-Za-z]+$/;
 
-   function addExpense(categoryId, amount,expense){
-       //Should be able to add expenses
+    async  function addExpense(expense, amount, category){
+        console.debug('addExpense', expense, amount, category);
+        if (!expense) {
+            error += ""
+        } else if(!amount) {
+            error += ""
+        }else if(!category){
+            error += ""
+        } else {
+            await query.addExpense(expense, amount, category);
+        }
        
-       if (expense && expense.match(letters)) {
-           expenseDescription = expense;
-       } else {
-           expenseDescription = undefined
-       }
+    }
+    function getExpenses() {
+
     }
 
-    function getExpenses(){
-        //Should be able to return all the expenses
+    function totalExpense() {
+
+    }
  
-     }
+    async function expensesForCategory(category){
+        //Should filter by the category of the expense
+        return query.expensesForCategory(category);
+
+    }    
+
+    function deleteExpense(expenseId){
+          //Delete a given expense
+    }
+
+    function allExpenses(){
+        return query.getAllExpenses();
+    }
+
+    async function categoryTotals(){
+    }
+
     return{
         addExpense,
-        getExpenses
+        getExpenses,
+        totalExpense,
+        expensesForCategory,
+        deleteExpense,
+        categoryTotals,
+        allExpenses
     }
 }

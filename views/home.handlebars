@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-     <!--css-->
+    <!--css-->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -15,38 +15,43 @@
 
         </div>
         <div class="main clearfix">
+
             <div class="content">
-                <label class="label-body">Description:</label>
-                <input class="input" type="text" placeholder="eg. Maintanance.." name="inputNumber" />
-                <label class="label-body">Amount:</label>
-                <input class="input" type="text" placeholder="eg. Maintanance.." name="inputNumber" /><br>
-                <div class="text-center" style="padding: 1em;">
-                    <h2>Category</h2>
-                    <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="CH">
-                    <label class="label-body">Daily</label>
-                    <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="CA">
-                    <label class="label-body">Weekly</label>
-                    <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="weekly">
-                    <label class="label-body">Weekday</label>
-                    <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="Week">
-                    <label class="label-body">Once-Off</label>
-                    <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="Once">
-                    <label class="label-body">Monthly</label>
-                    <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="Month">
-                    <label class="label-body">Weekend</label>
-                    <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="Weekend">
-                    <label class="label-body">All</label>
-                    <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="All">
-                    <br>
+                <form action="/" method="post">
+                    <label class="label-body">Description:</label>
+                    <input class="input" type="text" placeholder="eg. Maintanance.." name="expense" />
+                    <label class="label-body">Amount:</label>
+                    <input class="input" type="text" placeholder="eg. Maintanance.." name="amount" /><br>
                     <div class="text-center" style="padding: 1em;">
-                        <button class="btn-default btn btn-info" type="submit" name="button">Add Expense</button>
+                        <h2>Category</h2>
+                        <label class="label-body">Daily</label>
+                        <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="daily">
+                        <label class="label-body">Weekly</label>
+                        <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="weekly">
+                        <label class="label-body">Weekday</label>
+                        <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="weekday">
+                        <label class="label-body">Once-Off</label>
+                        <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="once-off">
+                        <label class="label-body">Monthly</label>
+                        <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="Month">
+                        <label class="label-body">Weekend</label>
+                        <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="Weekend">
+                        <label class="label-body">All</label>
+                        <input type="radio" name="categoryRadio" class="categoryItemTypeRadio" value="All">
+                        <br>
+                        <div class="text-center" style="padding: 1em;">
+                            <button class="btn-default btn btn-info" type="submit" name="button">Add Expense</button>
+                        </div>
+                        <strong>Total amount:</strong>
+                        <span class="total ">R<span class="expenseTotal">0.00</span> </span>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
-        <div class="footer">
+    </div>
+    <div class="footer">
 
-        </div>
+    </div>
     </div>
 </body>
 

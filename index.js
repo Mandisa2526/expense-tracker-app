@@ -40,8 +40,9 @@ app.use(express.static('public'));
 
 //routes
 app.get('/',expenseTrackerApp.pageLoad);
+app.post('/',expenseTrackerApp.add); // Add button clicked
 // Set PORT variable
-let PORT = process.env.PORT || 4000;
+let PORT = process.env.PORT || 2000;
 
 app.listen(PORT, function () {
   console.log('App starting on port', PORT);
